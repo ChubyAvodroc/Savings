@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion Versions.compileSdk
     defaultConfig {
@@ -26,10 +28,18 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation Deps.kotlin_stdlib
+
     implementation Deps.support_appcompat_v7
     implementation Deps.support_constraint_layout
+
+    implementation Deps.architecture_lifecycle
+    kapt Deps.architecture_lifecycle_compiler
+    implementation Deps.architecture_persistence
+    kapt Deps.architecture_persistence_compiler
 
     testImplementation Testing.junit
     androidTestImplementation Testing.runner
     androidTestImplementation Testing.espresso
+    testImplementation Testing.architecture_live_data
+    testImplementation Testing.architecture_room
 }
