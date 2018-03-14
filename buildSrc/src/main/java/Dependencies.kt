@@ -31,6 +31,7 @@ object Deps {
     val support_appcompat_v7 = "com.android.support:appcompat-v7:${Versions.support_library}"
     val support_constraint_layout =
         "com.android.support.constraint:constraint-layout:${Versions.constraint_layout}"
+    val support_design_v7 = "com.android.support:design:${Versions.support_library}"
     val architecture_lifecycle = "android.arch.lifecycle:extensions:${Versions.arch_lifecycle}"
     val architecture_lifecycle_compiler =
         "android.arch.lifecycle:compiler:${Versions.arch_lifecycle}"

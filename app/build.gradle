@@ -31,6 +31,7 @@ dependencies {
 
     implementation Deps.support_appcompat_v7
     implementation Deps.support_constraint_layout
+    implementation Deps.support_design_v7
 
     implementation Deps.architecture_lifecycle
     kapt Deps.architecture_lifecycle_compiler
