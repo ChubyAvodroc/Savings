@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--item account-->
+    <dimen name="item_account_margin">16dp</dimen>
+    <dimen name="item_account_name_text_size">18sp</dimen>
+    <dimen name="item_account_amount_text_size">20sp</dimen>
+
+</resources>
