@@ -1,0 +1,64 @@
+{
+  "accounts": [
+    {
+      "name": "Account Name 0",
+      "amount": "$ 000.00"
+    },
+    {
+      "name": "Account Name 1",
+      "amount": "$ 500.00"
+    },
+    {
+      "name": "Account Name 2",
+      "amount": "$ 1,000.00"
+    },
+    {
+      "name": "Account Name 3",
+      "amount": "$ 1,500.00"
+    },
+    {
+      "name": "Account Name 4",
+      "amount": "$ 2,000.00"
+    },
+    {
+      "name": "Account Name 5",
+      "amount": "$ 2,500.00"
+    },
+    {
+      "name": "Account Name 6",
+      "amount": "$ 3,000.00"
+    },
+    {
+      "name": "Account Name 7",
+      "amount": "$ 3,500.00"
+    },
+    {
+      "name": "Account Name 8",
+      "amount": "$ 4,000.00"
+    },
+    {
+      "name": "Account Name 9",
+      "amount": "$ 4,500.00"
+    },
+    {
+      "name": "Account Name 10",
+      "amount": "$ 5,000.00"
+    },
+    {
+      "name": "Account Name 11",
+      "amount": "$ 5,500.00"
+    },
+    {
+      "name": "Account Name 12",
+      "amount": "$ 6,000.00"
+    },
+    {
+      "name": "Account Name 13",
+      "amount": "$ 6,500.00"
+    },
+    {
+      "name": "Account Name 14",
+      "amount": "$ 7,000.00"
+    }
+  ]
+}
