@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.chuby.savings.AccountsActivity"
+    tools:context="com.chuby.savings.ui.accounts.AccountsActivity"
     >
 
     <TextView
@@ -45,6 +45,7 @@
             app:layout_anchorGravity="end|bottom"
             app:useCompatPadding="true"
             />
+
     </android.support.design.widget.CoordinatorLayout>
 
 </android.support.constraint.ConstraintLayout>
