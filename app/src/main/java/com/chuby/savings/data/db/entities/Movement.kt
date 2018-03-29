@@ -9,7 +9,7 @@ import android.arch.persistence.room.PrimaryKey
  * Created by developer on 28/03/18.
  */
 @Entity(
-    tableName = "movements",
+    tableName = "Movements",
     foreignKeys = [ForeignKey(
         entity = Account::class,
         parentColumns = ["id"],
