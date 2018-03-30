@@ -39,12 +39,15 @@ dependencies {
 
     implementation Deps.architecture_lifecycle
     kapt Deps.architecture_lifecycle_compiler
+    testImplementation Testing.architecture_live_data
+
     implementation Deps.architecture_persistence
     kapt Deps.architecture_persistence_compiler
+    testImplementation Testing.architecture_room
 
     testImplementation Testing.junit
     androidTestImplementation Testing.runner
-    androidTestImplementation Testing.espresso
-    testImplementation Testing.architecture_live_data
-    testImplementation Testing.architecture_room
+    androidTestImplementation(Testing.espresso, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
 }
