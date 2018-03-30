@@ -1,5 +1,6 @@
 package com.chuby.savings.utils
 
+import com.chuby.savings.data.db.entities.Account
 import com.chuby.savings.data.db.entities.Address
 import com.chuby.savings.data.db.entities.User
 
@@ -37,4 +38,18 @@ object DbTestUtil {
     )
 
     fun getUsers(): List<User> = listOf(getFirstUser(), getSecondUser())
+
+    fun getFirstAccount(): Account = Account(
+        name = "Cayman Secret Account",
+        amount = 12_100_309.00,
+        userId = 1
+    )
+
+    fun getSecondAccount(): Account = Account(
+        name = "Schweiz Not Secret Account",
+        amount = 1_621_092_423.08,
+        userId = 2
+    )
+
+    fun getAccounts() = listOf(getFirstAccount(), getSecondAccount())
 }

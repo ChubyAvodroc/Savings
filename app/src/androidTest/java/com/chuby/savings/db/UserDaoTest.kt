@@ -21,6 +21,7 @@ class UserDaoTest : DbTest() {
     }
 
     @Test
+    @Throws(InterruptedException::class)
     fun insertUser() {
         val user = DbTestUtil.getFirstUser()
         val rowId = userDao.insert(user)
