@@ -16,4 +16,7 @@ interface UserDao : BaseDao<User> {
 
     @Query("SELECT * FROM Users")
     fun getUsers(): LiveData<List<User>>
+
+    @Query("SELECT * FROM Users WHERE id = :userId")
+    fun getUser(userId: Int): LiveData<User>
 }

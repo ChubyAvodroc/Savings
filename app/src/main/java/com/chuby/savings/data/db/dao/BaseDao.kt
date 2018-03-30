@@ -11,11 +11,23 @@ import android.arch.persistence.room.Update
 interface BaseDao<in Type> {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(entity: Type)
+    fun insert(entity: Type): Long
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @JvmSuppressWildcards
+    fun insert(entities: List<Type>): List<Long>
 
     @Update
     fun update(entity: Type)
 
+    @Update
+    @JvmSuppressWildcards
+    fun update(entities: List<Type>)
+
     @Delete
     fun delete(entity: Type)
+
+    @Delete
+    @JvmSuppressWildcards
+    fun delete(entities: List<Type>)
 }
