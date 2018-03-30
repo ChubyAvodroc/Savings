@@ -12,7 +12,7 @@ import com.chuby.savings.data.db.entities.User
 interface UserDao : BaseDao<User> {
 
     @Query("DELETE FROM Users WHERE id = :userId")
-    fun delete(userId: Int)
+    fun delete(userId: Int): Int
 
     @Query("SELECT * FROM Users")
     fun getUsers(): LiveData<List<User>>

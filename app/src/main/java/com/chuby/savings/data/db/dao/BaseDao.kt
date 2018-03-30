@@ -18,16 +18,16 @@ interface BaseDao<in Type> {
     fun insert(entities: List<Type>): List<Long>
 
     @Update
-    fun update(entity: Type)
+    fun update(entity: Type): Int
 
     @Update
     @JvmSuppressWildcards
-    fun update(entities: List<Type>)
+    fun update(entities: List<Type>): Int
 
     @Delete
-    fun delete(entity: Type)
+    fun delete(entity: Type): Int
 
     @Delete
     @JvmSuppressWildcards
-    fun delete(entities: List<Type>)
+    fun delete(entities: List<Type>): Int
 }

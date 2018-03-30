@@ -12,7 +12,7 @@ import com.chuby.savings.data.db.entities.Account
 interface AccountDao : BaseDao<Account> {
 
     @Query("DELETE FROM Accounts WHERE id = :accountId")
-    fun delete(accountId: Int)
+    fun delete(accountId: Int): Int
 
     @Query("SELECT * FROM Accounts")
     fun getAccounts(): LiveData<List<Account>>

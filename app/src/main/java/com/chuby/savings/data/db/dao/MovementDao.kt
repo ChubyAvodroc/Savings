@@ -12,7 +12,7 @@ import com.chuby.savings.data.db.entities.Movement
 interface MovementDao : BaseDao<Movement> {
 
     @Query("DELETE FROM Movements WHERE id = :movementId")
-    fun delete(movementId: Int)
+    fun delete(movementId: Int): Int
 
     @Query("SELECT * FROM Movements")
     fun getMovements(): LiveData<List<Movement>>
