@@ -41,9 +41,13 @@ dependencies {
     implementation Deps.architecture_persistence
     kapt Deps.architecture_persistence_compiler
 
+    implementation Deps.firebase_core
+
     testImplementation Testing.junit
     androidTestImplementation Testing.runner
     androidTestImplementation Testing.espresso
     testImplementation Testing.architecture_live_data
     testImplementation Testing.architecture_room
 }
+
+apply plugin: 'com.google.gms.google-services'

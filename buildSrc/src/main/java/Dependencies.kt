@@ -1,6 +1,7 @@
 object Versions {
     const val android_gradle_plugin = "3.0.1"
     const val kotlin = "1.2.21"
+    const val google_play_services = "3.2.0"
 
     const val minSdk = 17
     const val targetSdk = 26
@@ -13,6 +14,7 @@ object Versions {
     const val arch_lifecycle = "1.1.0"
     const val arch_persistence = "1.0.0"
     const val arch_paging = "1.0.0-alpha6"
+    const val firebase = "12.0.0"
 
     const val junit = "4.12"
     const val test_runner = "1.0.1"
@@ -23,6 +25,7 @@ object Deps {
     //    Plugins
     val android_gradle_plugin = "com.android.tools.build:gradle:${Versions.android_gradle_plugin}"
     val kotlin_gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+    val google_services_plugin = "com.google.gms:google-services:${Versions.google_play_services}"
 
     //    Kotlin
     val kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jre7:${Versions.kotlin}"
@@ -39,6 +42,7 @@ object Deps {
     val architecture_persistence_compiler =
         "android.arch.persistence.room:compiler:${Versions.arch_persistence}"
     val architecture_paging = "android.arch.paging:runtime:${Versions.arch_paging}"
+    val firebase_core = "com.google.firebase:firebase-core:${Versions.firebase}"
 
 }
 

@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "608705304799",
+    "firebase_url": "https://savings-7e56e.firebaseio.com",
+    "project_id": "savings-7e56e",
+    "storage_bucket": "savings-7e56e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608705304799:android:40d5f11b190c6a31",
+        "android_client_info": {
+          "package_name": "com.chuby.savings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608705304799-o6vp0sqf96slads09la8rors5ret3mg3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjhvOzL1LabrfVl6yFETl771VDmON7jAA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608705304799:android:8e0c96950645c74a",
+        "android_client_info": {
+          "package_name": "com.chuby.savings.dbg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608705304799-o6vp0sqf96slads09la8rors5ret3mg3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjhvOzL1LabrfVl6yFETl771VDmON7jAA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
