@@ -1,15 +1,13 @@
 package com.chuby.savings.data.db.entities
 
-import android.arch.persistence.room.ColumnInfo
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.ForeignKey
-import android.arch.persistence.room.PrimaryKey
+import android.arch.persistence.room.*
 
 /**
  * Created by developer on 28/03/18.
  */
 @Entity(
     tableName = "Accounts",
+    indices = [(Index(name = "userId", value = arrayOf("user_id")))],
     foreignKeys = [ForeignKey(
         entity = User::class,
         parentColumns = ["id"],
