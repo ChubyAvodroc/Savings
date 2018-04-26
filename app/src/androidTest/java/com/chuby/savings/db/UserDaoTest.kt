@@ -38,7 +38,7 @@ class UserDaoTest : DbTest() {
         val users = DbTestUtil.getUsers()
         val rowIds = userDao.insert(users)
 
-        verifyValue(rowIds, listOf(1L, 2L))
+        verifyValue(rowIds, listOf(1L, 2L, 3L))
     }
 
     @Test
@@ -50,7 +50,7 @@ class UserDaoTest : DbTest() {
 
         val usersLoaded = LiveDataTestUtil.getValue(userDao.getUsers())
 
-        verifyValue(usersLoaded.size, 2)
+        verifyValue(usersLoaded.size, 3)
 
 
         val firstUser = usersLoaded[0] // first user

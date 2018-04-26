@@ -24,6 +24,13 @@ object DbTestUtil {
         54321
     )
 
+    private fun getThirdUserAddress(): Address = Address(
+        "False Street 654",
+        "False Sate 768",
+        "False City 956",
+        83746
+    )
+
     fun getFirstUser(): User = User(
         name = "FirstUser",
         lastname = "Fake",
@@ -38,21 +45,66 @@ object DbTestUtil {
         address = getSecondUserAddress()
     )
 
-    fun getUsers(): List<User> = listOf(getFirstUser(), getSecondUser())
+    fun getThirdUser(): User = User(
+        name = "ThirdUser",
+        lastname = "NotReal",
+        surname = "Dummy",
+        address = getThirdUserAddress()
+    )
 
-    fun getFirstAccount(): Account = Account(
+    fun getUsers(): List<User> = listOf(getFirstUser(), getSecondUser(), getThirdUser())
+
+    fun getCaymanAccount(): Account = Account(
         name = "Cayman Secret Account",
         amount = 12_100_309.00,
         userId = 1
     )
 
-    fun getSecondAccount(): Account = Account(
+    fun getVeniceAccount(): Account = Account(
+        name = "Venice Secret Account",
+        amount = 23_417_432.34,
+        userId = 1
+    )
+
+    fun getRussianAccount(): Account = Account(
+        name = "Russian Secret Account",
+        amount = 65_349.67,
+        userId = 1
+    )
+
+    fun getSchweizAccount(): Account = Account(
         name = "Schweiz Not Secret Account",
         amount = 1_621_092_423.08,
         userId = 2
     )
 
-    fun getAccounts() = listOf(getFirstAccount(), getSecondAccount())
+    fun getAfricanAccount(): Account = Account(
+        name = "African Account",
+        amount = 1_621_092_423.27,
+        userId = 3
+    )
+
+    fun getIndianAccount(): Account = Account(
+        name = "Indian Account",
+        amount = 5_362_748_929_371.00,
+        userId = 3
+    )
+
+    fun getIrelandAccount(): Account = Account(
+        name = "Ireland Account",
+        amount = 2_749_238_749.82,
+        userId = 3
+    )
+
+    fun getAccounts() = listOf(
+        getCaymanAccount(),
+        getVeniceAccount(),
+        getRussianAccount(),
+        getSchweizAccount(),
+        getAfricanAccount(),
+        getIndianAccount(),
+        getIrelandAccount()
+    )
 
     fun getFoodMovement(accountId: Int): Movement = Movement(
         name = "Buy food",

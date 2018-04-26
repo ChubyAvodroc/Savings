@@ -25,7 +25,7 @@ class AccountDaoTest : DbTest() {
     fun insertAccount() {
         userDao.insert(DbTestUtil.getFirstUser())
 
-        val account = DbTestUtil.getFirstAccount()
+        val account = DbTestUtil.getCaymanAccount()
         val rowId = accountDao.insert(account)
 
         verifyValue(rowId, 1L)
@@ -38,16 +38,16 @@ class AccountDaoTest : DbTest() {
         val accounts = DbTestUtil.getAccounts()
         val rowId = accountDao.insert(accounts)
 
-        verifyValue(rowId, listOf(1L, 2L))
+        verifyValue(rowId, listOf(1L, 2L, 3L, 4L, 5L, 6L, 7L))
     }
 
     @Test
     @Throws(InterruptedException::class)
     fun updateAccount() {
         userDao.insert(DbTestUtil.getFirstUser())
-        accountDao.insert(DbTestUtil.getFirstAccount())
+        accountDao.insert(DbTestUtil.getCaymanAccount())
 
-        val account = LiveDataTestUtil.getValue(accountDao.getAccounts())[0]
+        val account = LiveDataTestUtil.getValue(accountDao.getAccount(1))
         account.amount = 23.11
 
         val updatedRows = accountDao.update(account)
@@ -57,6 +57,22 @@ class AccountDaoTest : DbTest() {
         val updatedAccount = LiveDataTestUtil.getValue(accountDao.getAccounts())[0]
 
         verifyValue(updatedAccount.amount, 23.11)
+    }
+
+    @Test
+    @Throws(InterruptedException::class)
+    fun insertAccountsAndReadByUserId() {
+        userDao.insert(DbTestUtil.getUsers())
+        accountDao.insert(DbTestUtil.getAccounts())
+        movementDao.insert(DbTestUtil.getMovements())
+
+        val firstUserAccounts = LiveDataTestUtil.getValue(accountDao.getAccountsForUser(1))
+
+        verifyValue(firstUserAccounts.size, 3)
+
+        val secondUserAccounts = LiveDataTestUtil.getValue(accountDao.getAccountsForUser(2))
+
+        verifyValue(secondUserAccounts.size, 1)
     }
 
     @Test
@@ -89,7 +105,7 @@ class AccountDaoTest : DbTest() {
 
         val accounts = LiveDataTestUtil.getValue(accountDao.getAccounts())
 
-        verifyValue(accounts.size, 2)
+        verifyValue(accounts.size, 7)
 
         val deletedRows = accountDao.delete(accounts[1])
 
@@ -106,7 +122,7 @@ class AccountDaoTest : DbTest() {
 
         val deletedRows = accountDao.delete(accounts)
 
-        verifyValue(deletedRows, 2)
+        verifyValue(deletedRows, 7)
         verifyValue(LiveDataTestUtil.getValue(accountDao.getAccounts()).isEmpty(), true)
     }
 }

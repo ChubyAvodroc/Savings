@@ -17,6 +17,9 @@ interface AccountDao : BaseDao<Account> {
     @Query("SELECT * FROM Accounts")
     fun getAccounts(): LiveData<List<Account>>
 
-    @Query("SELECT * FROM Accounts WHERE id = :userId")
+    @Query("SELECT * FROM Accounts WHERE id = :accountId")
+    fun getAccount(accountId: Int): LiveData<Account>
+
+    @Query("SELECT * FROM Accounts WHERE user_id = :userId")
     fun getAccountsForUser(userId: Int): LiveData<List<Account>>
 }

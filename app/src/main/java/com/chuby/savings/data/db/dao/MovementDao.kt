@@ -17,6 +17,9 @@ interface MovementDao : BaseDao<Movement> {
     @Query("SELECT * FROM Movements")
     fun getMovements(): LiveData<List<Movement>>
 
+    @Query("SELECT * FROM Movements WHERE id = :movementId")
+    fun getMovement(movementId: Int): LiveData<Movement>
+
     @Query("SELECT * FROM Movements WHERE account_id = :accountId")
     fun getMovementsForAccount(accountId: Int): LiveData<List<Movement>>
 }
